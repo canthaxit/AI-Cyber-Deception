@@ -1,0 +1,12 @@
+[
+  {"timestamp": "2026-01-01T09:00:00Z", "user": "alice", "source_ip": "192.168.1.10", "event_type": "login", "action": "success", "message": "User logged in successfully"},
+  {"timestamp": "2026-01-01T09:05:00Z", "user": "alice", "source_ip": "192.168.1.10", "event_type": "file_access", "action": "success", "message": "Accessed /home/alice/documents"},
+  {"timestamp": "2026-01-01T09:15:00Z", "user": "bob", "source_ip": "192.168.1.11", "event_type": "login", "action": "success", "message": "User logged in successfully"},
+  {"timestamp": "2026-01-01T09:20:00Z", "user": "bob", "source_ip": "192.168.1.11", "event_type": "file_access", "action": "success", "message": "Accessed /var/www/html"},
+  {"timestamp": "2026-01-01T10:00:00Z", "user": "alice", "source_ip": "192.168.1.10", "event_type": "logout", "action": "success", "message": "User logged out"},
+  {"timestamp": "2026-01-01T10:30:00Z", "user": "charlie", "source_ip": "192.168.1.12", "event_type": "login", "action": "success", "message": "User logged in successfully"},
+  {"timestamp": "2026-01-01T11:00:00Z", "user": "charlie", "source_ip": "192.168.1.12", "event_type": "file_access", "action": "success", "message": "Accessed /home/charlie/projects"},
+  {"timestamp": "2026-01-01T14:00:00Z", "user": "bob", "source_ip": "192.168.1.11", "event_type": "login", "action": "success", "message": "User logged in successfully"},
+  {"timestamp": "2026-01-01T14:15:00Z", "user": "alice", "source_ip": "192.168.1.10", "event_type": "login", "action": "success", "message": "User logged in successfully"},
+  {"timestamp": "2026-01-01T15:00:00Z", "user": "bob", "source_ip": "192.168.1.11", "event_type": "logout", "action": "success", "message": "User logged out"}
+]

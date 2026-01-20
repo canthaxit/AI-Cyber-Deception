@@ -169,3 +169,39 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# ===========================================
+# Project-specific ignores
+# ===========================================
+
+# Credentials & Secrets (IMPORTANT!)
+chronicle_credentials.json
+chronicle_config.json
+*.pem
+*.key
+secrets/
+
+# Trained models (large files - users train their own)
+core/anomaly_outputs/*.pkl
+core/anomaly_outputs/*.png
+core/anomaly_outputs/*.csv
+core/anomaly_outputs/*.json
+
+# Batch outputs
+batch/batch_outputs/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp

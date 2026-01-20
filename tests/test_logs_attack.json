@@ -1,0 +1,20 @@
+[
+  {"timestamp": "2026-01-08T10:00:00Z", "user": "admin", "source_ip": "10.0.0.100", "event_type": "login", "action": "failed", "message": "Failed login attempt"},
+  {"timestamp": "2026-01-08T10:00:05Z", "user": "admin", "source_ip": "10.0.0.100", "event_type": "login", "action": "failed", "message": "Failed login attempt"},
+  {"timestamp": "2026-01-08T10:00:10Z", "user": "admin", "source_ip": "10.0.0.100", "event_type": "login", "action": "failed", "message": "Failed login attempt"},
+  {"timestamp": "2026-01-08T10:00:15Z", "user": "admin", "source_ip": "10.0.0.100", "event_type": "login", "action": "failed", "message": "Failed login attempt"},
+  {"timestamp": "2026-01-08T10:00:20Z", "user": "admin", "source_ip": "10.0.0.100", "event_type": "login", "action": "failed", "message": "Failed login attempt"},
+  {"timestamp": "2026-01-08T10:00:25Z", "user": "admin", "source_ip": "10.0.0.100", "event_type": "login", "action": "failed", "message": "Failed login attempt"},
+  {"timestamp": "2026-01-08T10:00:30Z", "user": "admin", "source_ip": "10.0.0.100", "event_type": "login", "action": "failed", "message": "Failed login attempt"},
+  {"timestamp": "2026-01-08T10:00:35Z", "user": "admin", "source_ip": "10.0.0.100", "event_type": "login", "action": "failed", "message": "Failed login attempt"},
+  {"timestamp": "2026-01-08T10:00:40Z", "user": "admin", "source_ip": "10.0.0.100", "event_type": "login", "action": "failed", "message": "Failed login attempt"},
+  {"timestamp": "2026-01-08T10:00:45Z", "user": "admin", "source_ip": "10.0.0.100", "event_type": "login", "action": "failed", "message": "Failed login attempt"},
+  {"timestamp": "2026-01-08T10:00:50Z", "user": "admin", "source_ip": "10.0.0.100", "event_type": "login", "action": "failed", "message": "Failed login attempt"},
+  {"timestamp": "2026-01-08T10:00:55Z", "user": "admin", "source_ip": "10.0.0.100", "event_type": "login", "action": "failed", "message": "Failed login attempt"},
+  {"timestamp": "2026-01-08T02:00:00Z", "user": "root", "source_ip": "10.0.0.101", "event_type": "file_access", "action": "success", "message": "Accessed /etc/shadow"},
+  {"timestamp": "2026-01-08T02:05:00Z", "user": "unknown", "source_ip": "10.0.0.102", "event_type": "sudo", "action": "success", "message": "Executed sudo command"},
+  {"timestamp": "2026-01-08T03:00:00Z", "user": "alice", "source_ip": "192.168.1.10", "event_type": "file_access", "action": "success", "message": "Accessed /home/alice/sensitive_data"},
+  {"timestamp": "2026-01-08T14:30:00Z", "user": "alice", "source_ip": "192.168.1.10", "event_type": "login", "action": "success", "message": "Normal activity"},
+  {"timestamp": "2026-01-08T14:35:00Z", "user": "bob", "source_ip": "192.168.1.11", "event_type": "login", "action": "success", "message": "Normal activity"},
+  {"timestamp": "2026-01-08T15:00:00Z", "user": "charlie", "source_ip": "192.168.1.12", "event_type": "logout", "action": "success", "message": "Normal activity"}
+]

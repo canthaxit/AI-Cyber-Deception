@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "log-anomaly-detection": {
+      "command": "python",
+      "args": [
+        "C:\\Users\\jimmy\\.local\\bin\\anomaly_mcp_server.py"
+      ],
+      "env": {
+        "MODEL_DIR": "anomaly_outputs",
+        "PYTHONUNBUFFERED": "1"
+      }
+    }
+  }
+}

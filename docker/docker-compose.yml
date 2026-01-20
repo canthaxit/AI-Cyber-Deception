@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  # Main API service
+  anomaly-api:
+    build: .
+    container_name: anomaly-detection-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./anomaly_outputs:/app/anomaly_outputs
+      - ./logs:/app/logs
+    environment:
+      - PYTHONUNBUFFERED=1
+      - MODEL_DIR=/app/anomaly_outputs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  # MCP Server (optional)
+  anomaly-mcp:
+    build: .
+    container_name: anomaly-detection-mcp
+    command: python anomaly_mcp_server.py
+    volumes:
+      - ./anomaly_outputs:/app/anomaly_outputs
+      - ./logs:/app/logs
+    environment:
+      - PYTHONUNBUFFERED=1
+      - MODEL_DIR=/app/anomaly_outputs
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+
+  # Batch processor (cron-based)
+  anomaly-batch:
+    build: .
+    container_name: anomaly-detection-batch
+    command: python batch_processor.py
+    volumes:
+      - ./anomaly_outputs:/app/anomaly_outputs
+      - ./logs:/app/logs
+      - ./batch_outputs:/app/batch_outputs
+    environment:
+      - PYTHONUNBUFFERED=1
+      - BATCH_INTERVAL=3600  # Process every hour
+      - LOG_DIR=/app/logs
+      - OUTPUT_DIR=/app/batch_outputs
+    restart: unless-stopped
+
+volumes:
+  anomaly_outputs:
+  logs:
+  batch_outputs:

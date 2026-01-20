@@ -1,0 +1,71 @@
+{
+  "_comment": "Google Chronicle SIEM Configuration Template",
+  "_instructions": "1. Rename to chronicle_config.json, 2. Fill in your values, 3. Keep credentials file secure",
+
+  "credentials_file": "chronicle_credentials.json",
+  "customer_id": "C00000000",
+  "region": "us",
+  "log_type": "SECURITY_ANOMALY",
+  "batch_size": 100,
+  "min_severity": "medium",
+  "auto_create_rules": true,
+
+  "detection_rules": [
+    {
+      "name": "Critical_Security_Anomalies",
+      "description": "Immediate alert on critical severity anomalies",
+      "min_severity": "CRITICAL",
+      "min_score": 0.95
+    },
+    {
+      "name": "High_Severity_Anomalies",
+      "description": "Alert on high severity security events",
+      "min_severity": "HIGH",
+      "min_score": 0.85
+    },
+    {
+      "name": "Brute_Force_Attacks",
+      "description": "Detect credential brute force attempts",
+      "min_severity": "MEDIUM",
+      "min_score": 0.7,
+      "threat_type": "brute_force"
+    },
+    {
+      "name": "Privilege_Escalation_Attempts",
+      "description": "Detect privilege escalation attempts",
+      "min_severity": "HIGH",
+      "min_score": 0.8,
+      "threat_type": "privilege_escalation"
+    },
+    {
+      "name": "Data_Exfiltration_Detection",
+      "description": "Detect potential data exfiltration",
+      "min_severity": "HIGH",
+      "min_score": 0.85,
+      "threat_type": "data_exfiltration"
+    },
+    {
+      "name": "Lateral_Movement_Detection",
+      "description": "Detect lateral movement in network",
+      "min_severity": "MEDIUM",
+      "min_score": 0.75,
+      "threat_type": "lateral_movement"
+    }
+  ],
+
+  "_regions": {
+    "us": "United States (default)",
+    "europe": "Europe",
+    "asia": "Asia (asia-southeast1)"
+  },
+
+  "_severity_levels": ["LOW", "MEDIUM", "HIGH", "CRITICAL"],
+
+  "_threat_types": [
+    "brute_force",
+    "privilege_escalation",
+    "data_exfiltration",
+    "lateral_movement",
+    "unknown"
+  ]
+}
